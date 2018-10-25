@@ -188,8 +188,7 @@ var AppViewModel = function () {
 
   this.initialLocations = ko.observableArray();
 
-  // Filtro
-  this.filteredInput = ko.observable("");
+  
 
   // Exibe o marcador quando clicado
   this.showLocation = function (locations) {
@@ -202,6 +201,8 @@ var AppViewModel = function () {
     self.initialLocations.push(place);
   }
 
+  // Filtro
+  this.searchInput = ko.observable("");
 
   this.search = ko.computed(function () {
 
